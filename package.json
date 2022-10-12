@@ -1,0 +1,29 @@
+{
+  "name": "hashing_passwords",
+  "version": "1.0.0",
+  "description": "Review different ways for hasshing passwords in nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myas92/Hashing-Password-Ways-Nodejs-Express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myas92/Hashing-Password-Ways-Nodejs-Express/issues"
+  },
+  "homepage": "https://github.com/myas92/Hashing-Password-Ways-Nodejs-Express#readme",
+  "dependencies": {
+    "argon2": "^0.29.1",
+    "async": "^3.2.4",
+    "axios": "^1.1.2",
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2"
+  }
+}
