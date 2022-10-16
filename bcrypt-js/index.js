@@ -4,14 +4,13 @@ const bcryptjs = require('bcryptjs');
 const app = express();
 app.use(bodyParser.json());
 
-app.post('/', async (req, res) => {
+app.post('/hashing', async (req, res) => {
     const { password } = req.body
-    // console.log(password);
-    const hashedPassword = await bcryptjs.hash(password, 1)
-    res.send({ password: hashedPassword })
+    const saltRounds = 10;
+    const salt = bcryptjs.genSaltSync(saltRounds);
+    const hashedPassword = await bcryptjs.hash(password, salt);
+    res.send({ message: 'Done' })
 })
-
-
 
 app.listen(3002, () => {
     console.log('Listening on port: 3002')
