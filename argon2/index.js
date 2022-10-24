@@ -4,7 +4,7 @@ const argon2 = require('argon2');
 const app = express();
 app.use(bodyParser.json());
 
-app.post('/', async (req, res) => {
+app.post('/hashing', async (req, res) => {
     const { password } = req.body;
     let hashedPassword = await argon2.hash(password);
     res.send({ password: hashedPassword })

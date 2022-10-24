@@ -9,8 +9,10 @@ app.post('/hashing', async (req, res) => {
     const saltRounds = 10;
     const salt = bcrypt.genSaltSync(saltRounds);
     const hashedPassword = await bcrypt.hash(password, salt);
-    res.send({ password: 'Done' })
+    res.send({ message: 'Done' })
 })
+
+
 
 app.listen(3002, () => {
     console.log('Listening on port: 3002')
